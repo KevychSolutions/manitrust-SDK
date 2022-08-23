@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ManiTrust_SDK-Swift.h</key>
 		<data>
-		CnVII9tLwU+UX8XVYBMkMlj2ajo=
+		BqHWAlR3CuYZjYHUdlpBzUutDlE=
 		</data>
 		<key>Headers/ManiTrust_SDK.h</key>
 		<data>
@@ -14,31 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		UlOIfZWsDttgkH5DfvS+vqao+AU=
+		5gLjpGNq+lNOn8bY/nIP8abX6z8=
 		</data>
 		<key>Modules/ManiTrust_SDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		OEA1Ye4q6BO/Bo5fbTpLAk0R9ho=
+		wsjHY19gE6mkBrqHEc8BFhNaM8Q=
 		</data>
 		<key>Modules/ManiTrust_SDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		7EKur7l6lMWsWI7//M2Xhp6OI1M=
+		M0s7dq+1BPeAaluECs6loiPV9kY=
 		</data>
 		<key>Modules/ManiTrust_SDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		luZdye8ggWmqm46RzhJw2M0y3G8=
+		69gdvsTawEcg5insHwPgdYeIdRw=
 		</data>
 		<key>Modules/ManiTrust_SDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		FXHZzMD0EUWFelyvgwX0ylOA9gI=
+		q7LeLNqd+TsJC1/M9iQ6pywjyfk=
 		</data>
 		<key>Modules/ManiTrust_SDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		CDdpbvRGineZTUs26xUxTeBKnXo=
+		QtbL/2SjxsK+zpfB90FOFBBIxq0=
 		</data>
 		<key>Modules/ManiTrust_SDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		yaVHVa9m2WLAZFN18mEACIRbqOQ=
+		RIl+qnMEZETAATd3oZZjn4hLSsg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X6RHbQU4BRuQL4BiagoMXUFU3tyBgSi6F6co2Y2HVrU=
+			WOu4n+zuVEsvxZAKzLRQJu6cg7C8tneokNVvd9nTOeQ=
 			</data>
 		</dict>
 		<key>Headers/ManiTrust_SDK.h</key>
@@ -65,42 +65,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ctRvFd97MXbeW08Lc/tyUTPrOEprwnO8Irtl4ndUWTk=
+			wge0YQnUh1a8G3ol5Z5r3Dn3Dw7M8As5J1t/t0NIMgo=
 			</data>
 		</dict>
 		<key>Modules/ManiTrust_SDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9nx1dr1fENbFhlgRvCHyc0Xbn4Uz8/OuFES8oQaz03A=
+			tfm74yCV6IDxdbw98k3IsmMhHlZmVGL+QhoH4RF7O8Q=
 			</data>
 		</dict>
 		<key>Modules/ManiTrust_SDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			v5CsQo6CpY+OKst+OSmTGgiKAAWOX09tOowlya31Nxo=
+			244j4SGLhsvAQHRpyfcRctwNE2Z66E/3I/RP4omrVl8=
 			</data>
 		</dict>
 		<key>Modules/ManiTrust_SDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zTldEIPVOTgl24VpiZAIB/+a3AAc6GNjLE/peWNC5Ek=
+			8CCktear0Ao78paOmYOc5v5a+g70zZ1QNqy+9JPzWEw=
 			</data>
 		</dict>
 		<key>Modules/ManiTrust_SDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WVSeN/npBhuXW3nd+MU8MFWopyNovhzmTbNX1UiwR10=
+			cbgUZ2acThaXalcf6V7l1wR54moE9wxfvdJ3N/2fvY4=
 			</data>
 		</dict>
 		<key>Modules/ManiTrust_SDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nNQaHacsyRanDkYM6VEPv+KWRcTH8GAgBRJ+LJcGJCk=
+			5BWJlJiXTclzUVCLQh7CQJpK4o/KMhg529KQp2W9btg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

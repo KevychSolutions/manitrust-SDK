@@ -1,14 +1,21 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ManiTrust_SDK
 import Contacts
+import Foundation
 @_exported import ManiTrust_SDK
 import Swift
-import UIKit
 import _Concurrency
-@objc @_inheritsConvenienceInitializers public class ManiTrustManager : ObjectiveC.NSObject {
-  public static let shared: ManiTrust_SDK.ManiTrustManager
+@objc public class ManiTrustBuilder : ObjectiveC.NSObject {
+  @objc public init(projectID: Swift.String, apiKey: Swift.String, token: Swift.String, phoneNumber: Swift.String)
+  @objc deinit
+}
+@objc public protocol ManiTrustManagerProtocol {
+  @objc func setupContact(contactData: [Swift.AnyHashable : Any])
+}
+@_inheritsConvenienceInitializers @objc public class ManiTrustManager : ObjectiveC.NSObject, ManiTrust_SDK.ManiTrustManagerProtocol {
+  public static var shared: ManiTrust_SDK.ManiTrustManagerProtocol
+  @objc public func setupContact(contactData: [Swift.AnyHashable : Any])
   @objc override dynamic public init()
-  public func setupContact(contactData: [Swift.AnyHashable : Any])
   @objc deinit
 }
