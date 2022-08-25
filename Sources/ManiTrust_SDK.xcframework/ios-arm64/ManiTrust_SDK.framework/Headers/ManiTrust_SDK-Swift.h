@@ -216,6 +216,13 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class NSString;
 
+SWIFT_PROTOCOL("_TtP13ManiTrust_SDK24ManiTrustBuilderProtocol_")
+@protocol ManiTrustBuilderProtocol
+- (void)reqisteredDeviceWithProjectID:(NSString * _Nonnull)projectID apiKey:(NSString * _Nonnull)apiKey token:(NSString * _Nonnull)token phoneNumber:(NSString * _Nonnull)phoneNumber;
+- (void)setupContactWithContactData:(NSDictionary * _Nonnull)contactData;
+@end
+
+
 /// ManiTrustBuilder - inItializer for ManiTrust SDK for Apps
 /// <ul>
 ///   <li>
@@ -232,22 +239,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 ///   </li>
 /// </ul>
 SWIFT_CLASS("_TtC13ManiTrust_SDK16ManiTrustBuilder")
-@interface ManiTrustBuilder : NSObject
-- (nonnull instancetype)initWithProjectID:(NSString * _Nonnull)projectID apiKey:(NSString * _Nonnull)apiKey token:(NSString * _Nonnull)token phoneNumber:(NSString * _Nonnull)phoneNumber OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_PROTOCOL("_TtP13ManiTrust_SDK24ManiTrustManagerProtocol_")
-@protocol ManiTrustManagerProtocol
-- (void)setupContactWithContactData:(NSDictionary * _Nonnull)contactData;
-@end
-
-
-SWIFT_CLASS("_TtC13ManiTrust_SDK16ManiTrustManager")
-@interface ManiTrustManager : NSObject <ManiTrustManagerProtocol>
-/// Setup Contact - add contact or delete with data from push notification
+@interface ManiTrustBuilder : NSObject <ManiTrustBuilderProtocol>
+- (void)reqisteredDeviceWithProjectID:(NSString * _Nonnull)projectID apiKey:(NSString * _Nonnull)apiKey token:(NSString * _Nonnull)token phoneNumber:(NSString * _Nonnull)phoneNumber;
 - (void)setupContactWithContactData:(NSDictionary * _Nonnull)contactData;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end

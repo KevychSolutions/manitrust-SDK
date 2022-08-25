@@ -6,15 +6,13 @@ import Foundation
 @_exported import ManiTrust_SDK
 import Swift
 import _Concurrency
-@objc public class ManiTrustBuilder : ObjectiveC.NSObject {
-  @objc public init(projectID: Swift.String, apiKey: Swift.String, token: Swift.String, phoneNumber: Swift.String)
-  @objc deinit
-}
-@objc public protocol ManiTrustManagerProtocol {
+@objc public protocol ManiTrustBuilderProtocol {
+  @objc func reqisteredDevice(projectID: Swift.String, apiKey: Swift.String, token: Swift.String, phoneNumber: Swift.String)
   @objc func setupContact(contactData: [Swift.AnyHashable : Any])
 }
-@_inheritsConvenienceInitializers @objc public class ManiTrustManager : ObjectiveC.NSObject, ManiTrust_SDK.ManiTrustManagerProtocol {
-  public static var shared: ManiTrust_SDK.ManiTrustManagerProtocol
+@_inheritsConvenienceInitializers @objc public class ManiTrustBuilder : ObjectiveC.NSObject, ManiTrust_SDK.ManiTrustBuilderProtocol {
+  public static var shared: ManiTrust_SDK.ManiTrustBuilderProtocol
+  @objc public func reqisteredDevice(projectID: Swift.String, apiKey: Swift.String, token: Swift.String, phoneNumber: Swift.String)
   @objc public func setupContact(contactData: [Swift.AnyHashable : Any])
   @objc override dynamic public init()
   @objc deinit
