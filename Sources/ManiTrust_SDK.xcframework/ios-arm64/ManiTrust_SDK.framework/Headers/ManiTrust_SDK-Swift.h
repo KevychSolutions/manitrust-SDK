@@ -218,29 +218,50 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_PROTOCOL("_TtP13ManiTrust_SDK24ManiTrustBuilderProtocol_")
 @protocol ManiTrustBuilderProtocol
-- (void)reqisteredDeviceWithProjectID:(NSString * _Nonnull)projectID apiKey:(NSString * _Nonnull)apiKey token:(NSString * _Nonnull)token phoneNumber:(NSString * _Nonnull)phoneNumber;
+- (void)configureSDKWithUrl:(NSString * _Nonnull)url projectID:(NSString * _Nonnull)projectID apiKey:(NSString * _Nonnull)apiKey automaticContactPermission:(BOOL)automaticContactPermission automaticPushPermission:(BOOL)automaticPushPermission;
+- (void)registeredDeviceWithTokenDevice:(NSString * _Nonnull)tokenDevice phoneNumber:(NSString * _Nonnull)phoneNumber;
 - (void)setupContactWithContactData:(NSDictionary * _Nonnull)contactData;
 @end
 
 
 /// ManiTrustBuilder - inItializer for ManiTrust SDK for Apps
-/// <ul>
-///   <li>
-///     ProjectID -
-///   </li>
-///   <li>
-///     ApiKey -
-///   </li>
-///   <li>
-///     Token -
-///   </li>
-///   <li>
-///     PhoneNumber -
-///   </li>
-/// </ul>
 SWIFT_CLASS("_TtC13ManiTrust_SDK16ManiTrustBuilder")
 @interface ManiTrustBuilder : NSObject <ManiTrustBuilderProtocol>
-- (void)reqisteredDeviceWithProjectID:(NSString * _Nonnull)projectID apiKey:(NSString * _Nonnull)apiKey token:(NSString * _Nonnull)token phoneNumber:(NSString * _Nonnull)phoneNumber;
+/// ConfigureSDK - configure SDK with parameters:
+/// <ul>
+///   <li>
+///     url - Host URL for connect to the server
+///   </li>
+///   <li>
+///     projectID - project identification from admin panel
+///   </li>
+///   <li>
+///     apiKey - authorisations key for connect with admin panel
+///   </li>
+///   <li>
+///     automaticContactPermission - if parameter = true that SDK automatic sends the access request for the contact list to users
+///   </li>
+///   <li>
+///     automaticPushPermission - If parameter = true that SDK automatic sends the access request to send push notifications to users
+///   </li>
+/// </ul>
+- (void)configureSDKWithUrl:(NSString * _Nonnull)url projectID:(NSString * _Nonnull)projectID apiKey:(NSString * _Nonnull)apiKey automaticContactPermission:(BOOL)automaticContactPermission automaticPushPermission:(BOOL)automaticPushPermission;
+/// RegisteredDevice - registered device in admin panel with parameters:
+/// <ul>
+///   <li>
+///     tokenDevice - token device from Notification Service Extension or Firebase
+///   </li>
+///   <li>
+///     phoneNumber - number phone user
+///   </li>
+/// </ul>
+- (void)registeredDeviceWithTokenDevice:(NSString * _Nonnull)tokenDevice phoneNumber:(NSString * _Nonnull)phoneNumber;
+/// SetupContact - parse data from a push notification for adding or deleting the contact from the contacts list
+/// <ul>
+///   <li>
+///     contactData - dictionary from the body push notification
+///   </li>
+/// </ul>
 - (void)setupContactWithContactData:(NSDictionary * _Nonnull)contactData;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end

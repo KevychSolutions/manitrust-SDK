@@ -5,14 +5,18 @@ import Contacts
 import Foundation
 @_exported import ManiTrust_SDK
 import Swift
+import UIKit
+import UserNotifications
 import _Concurrency
 @objc public protocol ManiTrustBuilderProtocol {
-  @objc func reqisteredDevice(projectID: Swift.String, apiKey: Swift.String, token: Swift.String, phoneNumber: Swift.String)
+  @objc func configureSDK(url: Swift.String, projectID: Swift.String, apiKey: Swift.String, automaticContactPermission: Swift.Bool, automaticPushPermission: Swift.Bool)
+  @objc func registeredDevice(tokenDevice: Swift.String, phoneNumber: Swift.String)
   @objc func setupContact(contactData: [Swift.AnyHashable : Any])
 }
 @_inheritsConvenienceInitializers @objc public class ManiTrustBuilder : ObjectiveC.NSObject, ManiTrust_SDK.ManiTrustBuilderProtocol {
   public static var shared: ManiTrust_SDK.ManiTrustBuilderProtocol
-  @objc public func reqisteredDevice(projectID: Swift.String, apiKey: Swift.String, token: Swift.String, phoneNumber: Swift.String)
+  @objc public func configureSDK(url: Swift.String, projectID: Swift.String, apiKey: Swift.String, automaticContactPermission: Swift.Bool, automaticPushPermission: Swift.Bool)
+  @objc public func registeredDevice(tokenDevice: Swift.String, phoneNumber: Swift.String)
   @objc public func setupContact(contactData: [Swift.AnyHashable : Any])
   @objc override dynamic public init()
   @objc deinit

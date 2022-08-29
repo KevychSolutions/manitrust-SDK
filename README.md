@@ -1,11 +1,11 @@
-# Manitrust
-Github of Manitrust Service.
+# ManiTrust
+GitHub of ManiTrust Service.
 
 ## Installation
 
 ##### CocoaPods 
 
-[CocoaPods](https://cocoapods.org/) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate GrowthBook into your Xcode project using CocoaPods, specify it in your `Podfile`:
+[CocoaPods](https://cocoapods.org/) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate ManiTrust into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 - Add below in podfile - in respective target block
 
@@ -31,22 +31,33 @@ dependencies: [
 ]
 ```
 
-## Setup project
-reqistration in admin
+## Integration SDK
 
+SDK supports Firebase Messaging and APNS. If you set up on Dashboard Firebase please make sure you are also passing inside SDK Firebase token and otherwise APNS token.
 
-## Integration 
+1. Import SDK in file in which you are going to use it: `import ManiTrust_SDK`
+2. Set up SDK by using method `configureSDK`: 
 
-1. create apns key
-2. registrations in admin
-3. add Notifications Service Extention
-4. registered device in app `ManiTrustBuilder(projectID: "e4ecdf5c-33ad-4f70-9f42-58bf0edfb6da", apiKey: "ae1719f8a81c2ae9349888d0ed5c5d4d", token: deviceToken, phoneNumber: self.phoneNunber)`
-5. add call function in method `didReceive` 
-            `if let data = bestAttemptContent.userInfo["data"] as? [String: Any] {
-                ManiTrustManager.shared.setupContact(contactData: data)
-                contentHandler(bestAttemptContent)
-            } else {
-                ManiTrustManager.shared.setupContact(contactData: bestAttemptContent.userInfo)
-                contentHandler(bestAttemptContent)
-            } `
+```swift
+    ManiTrustBuilder.shared.configureSDK(url: <Server_URL>,
+                                         projectID: <Project_ID>,
+                                         apiKey: <APIKEY>,
+                                         automaticContactPermission: Bool,
+                                         automaticPushPermission: Bool)
+```
 
+3. In order to register devices you need to use the method `registeredDevice`:
+
+```swift
+    ManiTrustBuilder.shared.registeredDevice(tokenDevice: <TOKEN_DEVICE>,
+                                             phoneNumber: <PHONE_NUMBER>)
+```
+
+4. You need to integrate `Notification Service Extension` to the project and in method `didReceive` from `UNNotificationServiceExtension` you need add:
+
+ ```swift
+ ManiTrustBuilder.shared.setupContact(contactData: <[String: Any]>)
+ ```
+where parameters `contactData` it's a dictionary with data for adding/deleting contact in the contacts list.
+
+For detailed implementation please check the demo app version.
