@@ -26,7 +26,7 @@ jobs:
         useConfigFile: true
         configFilePath: ./.github/gitversion.yml
     - name: Create arhive framework
-      run: zip -r ManiTrust_SDK.xcframework.zip "./ManiTrust_SDK.xcframework" "./LICENSE"
+      run: zip -r ManiTrust_SDK.xcframework.zip "./Sources/ManiTrust_SDK.xcframework" "./LICENSE"
     - name: release
       uses: actions/create-release@v1
       id: create_release
